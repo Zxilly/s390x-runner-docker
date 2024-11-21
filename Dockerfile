@@ -12,7 +12,7 @@ FROM runner:ubuntu
 
 COPY --from=builder /build/GARD/gard /usr/local/bin/gard
 
-ENV RUNNER_LOCATION /opt/runner
+ENV RUNNER_LOCATION=/opt/runner
 
 USER root
 
