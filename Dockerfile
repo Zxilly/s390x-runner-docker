@@ -16,7 +16,9 @@ ENV RUNNER_LOCATION=/opt/runner
 
 USER root
 
-RUN apt-get install --no-install-recommends -y -qq bzip2 curl g++ gcc make jq tar unzip wget autoconf automake dbus dnsutils dpkg dpkg-dev fakeroot fonts-noto-color-emoji gnupg2 iproute2 iputils-ping libyaml-dev libtool libssl-dev locales mercurial openssh-client p7zip-rar pkg-config python-is-python3 rpm texinfo tk tree tzdata xvfb xz-utils zsync acl aria2 binutils bison brotli coreutils file findutils flex ftp haveged lz4 m4 mediainfo net-tools p7zip-full parallel patchelf pigz pollinate rsync shellcheck sqlite3 ssh sshpass sudo swig telnet time zip
+RUN apt-get install --no-install-recommends -y -qq bzip2 curl g++ gcc make jq tar unzip wget autoconf automake dbus dnsutils dpkg dpkg-dev fakeroot fonts-noto-color-emoji gnupg2 iproute2 iputils-ping libyaml-dev libtool libssl-dev locales mercurial openssh-client p7zip-rar pkg-config python-is-python3 rpm texinfo tk tree tzdata xvfb xz-utils zsync acl aria2 binutils bison brotli coreutils file findutils flex ftp haveged lz4 m4 mediainfo net-tools p7zip-full parallel patchelf pigz pollinate rsync shellcheck sqlite3 ssh sshpass sudo swig telnet time zip libtiff5-dev libjpeg8-dev libopenjp2-7-dev zlib1g-dev \
+libfreetype6-dev liblcms2-dev libwebp-dev tcl8.6-dev tk8.6-dev python3-tk \
+libharfbuzz-dev libfribidi-dev libxcb1-dev
 
 RUN apt-get update && \
     apt-get install --no-install-recommends -y \
