@@ -24,9 +24,6 @@ RUN apt-get update && \
 
 RUN echo "[global]\nbreak-system-packages = true" > /etc/pip.conf
 
-ENV PIPX_BIN_DIR=/opt/pipx_bin
-ENV PIPX_HOME=/opt/pipx
-
 RUN python3 -m pip install pipx && \
     python3 -m pipx ensurepath
 
@@ -35,7 +32,7 @@ USER ubuntu
 ENV PATH="$HOME/.local/bin:$PATH"
 
 RUN curl -fsSL https://sh.rustup.rs | sh -s -- -y --default-toolchain=stable --profile=minimal
-ENV PATH $PATH:/home/ubuntu/.cargo/bin
+ENV PATH="$PATH:/home/ubuntu/.cargo/bin"
 
 RUN pipx install poetry
 
