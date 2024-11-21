@@ -29,7 +29,7 @@ RUN python3 -m pip install pipx && \
 
 USER ubuntu
 
-ENV PATH="$HOME/.local/bin:$PATH"
+ENV PATH="/home/ubuntu/.local/bin:$PATH"
 
 RUN curl -fsSL https://sh.rustup.rs | sh -s -- -y --default-toolchain=stable --profile=minimal
 ENV PATH="$PATH:/home/ubuntu/.cargo/bin"
