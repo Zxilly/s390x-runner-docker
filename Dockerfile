@@ -34,11 +34,11 @@ RUN python3 -m pip install pipx && \
 
 ENV PATH="$HOME/.local/bin:$PATH"
 
-RUN pipx install poetry
-
 USER ubuntu
 
 RUN curl -fsSL https://sh.rustup.rs | sh -s -- -y --default-toolchain=stable --profile=minimal
 ENV PATH $PATH:/home/ubuntu/.cargo/bin
+
+RUN sudo pipx install poetry
 
 ENTRYPOINT ["/usr/local/bin/gard"]
